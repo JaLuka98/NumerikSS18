@@ -54,7 +54,7 @@ endfunction
 f = @(x) exp(x)+1; % we want to integrate this ...
 frunge = @(x) 1./(1+25*x.^2); % and the runge function
 wTrapez = [1/2 1/2]; % these are the weights for the trapezodial rule
-pTrapez = [0 1; % nodes for trapezodial rule in [0,1].
+pTrapez = [0 1]; % nodes for trapezodial rule in [0,1].
 wSimpson = [1/6 4/6 1/6]; % simpsons rule weights
 pSimpson = [0 1/2 1]; % and nodes
 % for f
