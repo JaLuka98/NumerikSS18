@@ -29,11 +29,9 @@ df = @(x) -2 * (x + sin(4.*x)); % df is f'(x)
 
 [xb,eb,vb] = mybisect(f,0,0.75)
 [xn,en,vn] = myNewton(f,df,0.75)
-semilogy(linspace(1,length(eb),length(eb)),eb, "Bisection method")
+semilogy(linspace(1,length(eb),length(eb)),eb)
 hold on
-semilogy(linspace(1,length(en),length(en)),en, "Newton-Raphson method")
+semilogy(linspace(1,length(en),length(en)),en)
 hold off
-legend (h, "location", "northeast");
-title ("Comparison of the convergence rate of Newton-Raphson method and bisection method.");
 save('plot.fig')
 print("plot.pdf");
